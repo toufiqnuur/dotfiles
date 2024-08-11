@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+LANG="ja_JP.utf-8"
+LC_COLLATE="ja_JP.utf-8"
+LC_TIME="ja_JP.utf-8"
+
+weekday() {
+  echo "<b><big> "$(date +'%A')" </big></b>"
+}
+
+week() {
+  #cmd[update:18000000]
+  echo "<b> "$(date +'%d %b %y')" </b>"
+}
+
+# Execute accordingly
+if [[ "$1" == "--weekday" ]]; then
+  weekday
+elif [[ "$1" == "--week" ]]; then
+  week
+else
+  week
+fi

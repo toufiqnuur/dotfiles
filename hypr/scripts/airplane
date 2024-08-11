@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Get Status
+get_state() {
+  state=$(rfkill list --output SOFT 3)
+  echo "$state"
+}
+
+notify_user() {
+  notify-send -h string:x-canonical-private-synchronous:sys-notify -t 2000 -u low "WiFi $(get_state)"
+}
+
+rfkill toggle wifi && notify_user

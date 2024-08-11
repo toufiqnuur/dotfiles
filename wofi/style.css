@@ -1,0 +1,28 @@
+window {
+  margin: 0px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+#input {
+  margin-bottom: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #000;
+}
+
+#inner-box {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#outer-box {
+  border: none;
+  background-color: transparent;
+}
+
+#entry:selected {
+  border-radius: 8px;
+  padding: 0px 8px;
+  background-color: rgb(0, 64, 221);
+}
